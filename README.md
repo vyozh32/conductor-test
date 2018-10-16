@@ -20,6 +20,7 @@ Deliverables: You need to provide a link to github repo with solution and inform
 
 ## Available Scripts
 
+Before start , run npm install command
 In the project directory, you can run:
 
 ### `npm run start`
