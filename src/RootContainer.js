@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import UserForm from './components/UserForm';
-import UserProfile from './containers/UserProfile';
+import UserProfile from './components/UserProfile';
 import ReposList from './components/ReposList';
 import { selectors as userSelectors, actions as userActions } from './store/ducks/user';
 import { selectors as reposSelectors, actions as reposActions } from './store/ducks/repos';

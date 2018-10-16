@@ -3,8 +3,8 @@ import endpoints from '../../../endpoints';
 import { GET_REPOS_SUCCESS } from '../repos';
 
 // Actions
-const GET_USER_SUCCESS = 'conductor/test/get-user-data';
-const GET_USER_ERROR = 'conductor/test/get-user-data-error';
+export const GET_USER_SUCCESS = 'conductor/test/get-user-data';
+export const GET_USER_ERROR = 'conductor/test/get-user-data-error';
 
 // defaultState
 
@@ -27,7 +27,8 @@ export default function(state = defaultUserState, action) {
 		case GET_USER_ERROR: {
 			return {
 				...state,
-				error: payload
+				error: payload,
+				data: null
 			};
 		}
 		default: {
@@ -50,23 +51,18 @@ const loadUserData = (type, payload) => {
 
 export const actions = {
 	getUserData: (user) => {
-		return (dispatch, getState) => {
+		return (dispatch) => {
 			const url = endpoints.USER.replace('{user_id}', user);
-			axios
+			return axios
 				.get(url)
 				.then((res) => {
 					return {
 						data: res.data
 					};
 				})
-				.then((response) => {
-					return dispatch(loadUserData(GET_USER_SUCCESS, response.data));
-				})
+				.then((response) => dispatch(loadUserData(GET_USER_SUCCESS, response.data)))
 				.then((action) => dispatch({ type: GET_REPOS_SUCCESS, payload: null }))
-				.catch((error) => {
-					dispatch({ type: GET_USER_SUCCESS, payload: null });
-					dispatch(loadUserData(GET_USER_ERROR, error));
-				});
+				.catch((error) => dispatch(loadUserData(GET_USER_ERROR, error)));
 		};
 	}
 };

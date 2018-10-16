@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[` 1`] = `
+Array [
+  <tr
+    className="table-row"
+    onClick={[Function]}
+  >
+    <td
+      colspan="8"
+      scope="col"
+    >
+      Repos name
+    </td>
+  </tr>,
+  <tr>
+    <td
+      scope="col"
+    >
+      11
+    </td>
+    <td
+      scope="col"
+    >
+      Repos name
+    </td>
+    <td
+      scope="col"
+    >
+      repos desc some test text
+    </td>
+    <td
+      scope="col"
+    >
+      10
+    </td>
+    <td
+      scope="col"
+    >
+      322 228 1488 1337
+    </td>
+    <td
+      scope="col"
+    >
+      10
+    </td>
+    <td
+      scope="col"
+    >
+      100
+    </td>
+    <td
+      scope="col"
+    >
+      228
+    </td>
+  </tr>,
+]
+`;
+
+exports[`<RootContainer> renders correctly 1`] = `
+<tr
+  className="table-row"
+  onClick={[Function]}
+>
+  <td
+    colspan="8"
+    scope="col"
+  >
+    Repos name
+  </td>
+</tr>
+`;
