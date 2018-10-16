@@ -1,13 +1,25 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-Below you will find some information on how to perform common tasks.<br>
-You can find the most recent version of this guide [here](https://github.com/facebook/create-react-app/blob/master/packages/react-scripts/template/README.md).
+## Description
+
+Goal: Build a single page application which allows to view public github user's information and repos.
+Technology stack: You are free to use any browser-based technologies you would like. Modern JavaScript application frameworks are especially
+recommended.
+Our suggested sequence of milestones is:
+Be able to enter github username
+Be able to display basic profile information for provided username (name, email, location, number of followers)
+Be able to display list of user's repos
+On click on repo name - be able to display basic repo information (description, is fork or not, number of stars, forks, PRs and issues)
+Design: should be simple and functional.
+Tests: at least one test for different components of your framework. For example if you use React / Redux there should be at least one test for
+Component, Action and Reducer.
+Deliverables: You need to provide a link to github repo with solution and information about how to run your project in Readme file.
 
 ## Available Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+### `npm run start`
 
 Runs the app in the development mode.<br>
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
